@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #EDF6FF; /* Matches the client's light blue bg */
+  color: #333333;
+  font-family: 'Inter', sans-serif;
+}
