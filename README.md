@@ -917,7 +917,7 @@ Features:
 
 ### Step 1: Install Frontend Dependencies
 ```bash
-cd c:\Users\Asus\Desktop\Projects\AfforaWebApp
+cd YourDirectory\
 npm install
 ```
 
@@ -960,7 +960,7 @@ node database.js
 
 #### Option 1: Use Batch Scripts (Recommended)
 ```bash
-cd c:\Users\Asus\Desktop\Projects\AfforaWebApp
+cd YourDirectory\
 
 # Run this ONCE to setup
 SETUP_FIRST.BAT
@@ -973,7 +973,7 @@ START_AFFORA.bat
 
 **Terminal 1 - Start Backend (Port 3000)**
 ```bash
-cd c:\Users\Asus\Desktop\Projects\AfforaWebApp\server
+cd YourDirectory\\server
 npm start
 ```
 
@@ -985,7 +985,7 @@ Connected to the SQLite database.
 
 **Terminal 2 - Start Frontend (Port 5173)**
 ```bash
-cd c:\Users\Asus\Desktop\Projects\AfforaWebApp
+cd YourDirectory\
 npm run dev
 ```
 
