@@ -15,13 +15,20 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-:: 2. INSTALL LIBRARIES
-echo [1/3] Installing Project Dependencies...
+:: 2. INSTALL FRONTEND LIBRARIES
+echo [1/4] Installing Frontend Dependencies...
 call npm install
 echo.
 
-:: 3. DOWNLOAD ASSETS
-echo [2/3] Downloading Product Images...
+:: 3. INSTALL BACKEND LIBRARIES (New Step)
+echo [2/4] Installing Server Dependencies...
+cd server
+call npm install express cors sqlite3 bcryptjs
+cd ..
+echo.
+
+:: 4. DOWNLOAD ASSETS
+echo [3/4] Downloading Product Images...
 if exist "download-images-robust.js" (
     node download-images-robust.js
 ) else (
@@ -29,8 +36,8 @@ if exist "download-images-robust.js" (
 )
 echo.
 
-:: 4. RESET DATABASE (Crucial for new Schema)
-echo [3/3] Resetting Database...
+:: 5. RESET DATABASE
+echo [4/4] Resetting Database...
 if exist "server\affora.db" (
     del "server\affora.db"
     echo   - Old database deleted. New one will be generated on startup.
